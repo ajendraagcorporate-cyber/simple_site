@@ -1,0 +1,105 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Reviews — Dr. Mukul Agrawal</title>
+<meta name="description" content="Financial Education by Mukul Agrawal. Learn about stock markets, mutual funds, and advanced investment strategies.">
+<link rel="canonical" href="https://mukulagrawal.example.com/reviews.html">
+<meta property="og:title" content="Student Reviews — Dr. Mukul Agrawal">
+<meta property="og:description" content="Financial Education by Mukul Agrawal. Learn about stock markets, mutual funds, and advanced investment strategies.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mukulagrawal.example.com/reviews.html">
+<meta property="og:image" content="https://mukulagrawal.example.com/img/mukul-sir-2026.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Student Reviews — Dr. Mukul Agrawal">
+<meta name="twitter:description" content="Financial Education by Mukul Agrawal. Learn about stock markets, mutual funds, and advanced investment strategies.">
+<meta name="twitter:image" content="https://mukulagrawal.example.com/img/mukul-sir-2026.jpg">
+
+<link rel="stylesheet" href="css/style.min.css?v=1784105107751">
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+<main>
+
+<!-- REVIEWS HERO -->
+<section style="padding-top:64px;padding-bottom:24px;">
+  <div class="wrap">
+    <p class="eyebrow">What Students Say</p>
+    <h1 class="display" style="font-size:2.6rem;line-height:1.1;margin:14px 0 16px;font-weight:600;">
+      Student Reviews
+    </h1>
+    <p style="font-size:1.05rem;line-height:1.65;color:var(--muted);max-width:640px;">
+      500+ students have gone from confusion to confidence with real market knowledge. Here's what a
+      few of them had to say — and you're welcome to add your own below.
+    </p>
+  </div>
+</section>
+
+<!-- REVIEWS GRID -->
+<section class="section-border" style="padding-top:48px;">
+  <div class="wrap">
+    <div id="reviewsGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;">
+      <!-- Fake / seed reviews rendered here by JS, plus any submitted by visitors -->
+    </div>
+  </div>
+</section>
+
+<!-- SUBMIT A REVIEW -->
+<section class="section-alt">
+  <div class="wrap" style="max-width:680px;">
+    <p class="eyebrow">Share Your Experience</p>
+    <h2 class="display" style="font-size:1.8rem;font-weight:600;margin:12px 0 20px;">Leave a Review</h2>
+
+    <form id="reviewForm" class="card" novalidate>
+      <div style="margin-bottom:20px;">
+        <label for="rv-name" style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:8px;">
+          Your Name <span style="color:#B3483C;">*</span>
+        </label>
+        <input type="text" id="rv-name" required
+          style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:2px;font-family:'Inter',sans-serif;font-size:0.96rem;background:var(--paper);color:var(--ink);"
+          placeholder="e.g. Priya Sharma">
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <label style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:8px;">
+          Rating
+        </label>
+        <select id="rv-rating" style="padding:10px 12px;border:1px solid var(--line);border-radius:2px;font-family:'Inter',sans-serif;font-size:0.95rem;background:var(--paper);color:var(--ink);">
+          <option value="5">â˜…â˜…â˜…â˜…â˜… (5)</option>
+          <option value="4">â˜…â˜…â˜…â˜…â˜† (4)</option>
+          <option value="3">â˜…â˜…â˜…â˜†â˜† (3)</option>
+          <option value="2">â˜…â˜…â˜†â˜†â˜† (2)</option>
+          <option value="1">â˜…â˜†â˜†â˜†â˜† (1)</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom:24px;">
+        <label for="rv-text" style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:8px;">
+          Your Review <span style="color:#B3483C;">*</span>
+        </label>
+        <textarea id="rv-text" rows="4" required
+          style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:2px;font-family:'Inter',sans-serif;font-size:0.96rem;background:var(--paper);color:var(--ink);resize:vertical;"
+          placeholder="Tell others about your experience..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="border:none;cursor:pointer;font-size:0.88rem;">Submit Review</button>
+      <span id="rv-success" style="display:none;margin-left:16px;color:var(--green);font-family:'IBM Plex Mono',monospace;font-size:0.85rem;">âœ“ Thanks for your review!</span>
+    </form>
+    <p class="mono" style="font-size:0.7rem;color:var(--muted);margin-top:12px;">
+      * Reviews you submit are saved in your browser only (for this demo site) and appear above instantly.
+      <a href="#" onclick="localStorage.removeItem('mukulSiteReviews'); location.reload(); return false;" style="text-decoration:underline;color:var(--ink);margin-left:8px;">Clear my reviews</a>
+    </p>
+  </div>
+</section>
+
+
+
+</main>
+<div id="footer-placeholder"></div>
+
+<script src="js/main.min.js?v=1784105107751"></script>
+</body>
+</html>
