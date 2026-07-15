@@ -1381,6 +1381,31 @@ footer a{text-decoration:none;color:#EDEAD9;}
   div[style*="grid-template-columns:repeat(4,1fr)"] {
     grid-template-columns: 1fr 1fr !important;
   }
+  
+  /* Enforce hamburger menu logic */
+  .nav-toggle { display: inline-flex !important; order: 3; }
+  .nav-links {
+    order: 4;
+    width: 100%;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2px !important;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .3s ease, opacity .2s ease;
+  }
+  .nav.is-open .nav-links { max-height: 320px; opacity: 1; margin-top: 14px; }
+  .nav-links li { width: 100%; }
+  .nav-links a { display: block; width: 100%; padding: 11px 2px; border-bottom: 1px solid var(--line); border-color: transparent !important; }
+  .nav-links a::after { display: none !important; }
+  .nav-cta {
+    order: 5; width: 100%; justify-content: center;
+    max-height: 0; padding-top: 0 !important; padding-bottom: 0 !important; margin-top: 0 !important;
+    opacity: 0; overflow: hidden;
+    transition: max-height .3s ease, opacity .2s ease, margin-top .3s ease, padding .3s ease;
+  }
+  .nav.is-open .nav-cta { max-height: 52px; padding: 12px 18px !important; margin-top: 10px !important; opacity: 1; }
 }
 @media (max-width: 480px) {
   /* Stack 2 columns into 1 on very small screens for the quick facts */
