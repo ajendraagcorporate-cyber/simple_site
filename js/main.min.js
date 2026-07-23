@@ -2,7 +2,7 @@
 // --- TEMPLATES ---
 var headerHTML = `<nav class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="brand">
+    <a href="/" class="brand">
       <span class="brand-mark"><img src="img/mukul-sir-2026.jpg" alt="Dr. Mukul Agrawal"></span>
       <span class="brand-text">
         <span class="brand-name">Dr. Mukul Agrawal</span>
@@ -13,10 +13,10 @@ var headerHTML = `<nav class="nav">
       <span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="index.html">About</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="reviews.html">Student Reviews</a></li>
-      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="/">About</a></li>
+      <li><a href="/videos">Videos</a></li>
+      <li><a href="/reviews">Student Reviews</a></li>
+      <li><a href="/contact-us">Contact Us</a></li>
     </ul>
     <a class="nav-cta" href="https://www.youtube.com/@FinanceWithMukulAgrawal" target="_blank" rel="noopener">Watch on YouTube \u2192</a>
   </div>
@@ -35,10 +35,10 @@ var footerHTML = `<footer>
     <div>
       <div style="font-size:0.9rem;font-weight:600;color:#fff;margin-bottom:20px;">Quick Links</div>
       <ul class="footer-links" style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
-        <li><a href="index.html">About Dr. Mukul</a></li>
-        <li><a href="videos.html">Watch Videos</a></li>
-        <li><a href="reviews.html">Student Reviews</a></li>
-        <li><a href="contact-us.html">Contact Us</a></li>
+        <li><a href="/">About Dr. Mukul</a></li>
+        <li><a href="/videos">Watch Videos</a></li>
+        <li><a href="/reviews">Student Reviews</a></li>
+        <li><a href="/contact-us">Contact Us</a></li>
         <li><a href="https://www.youtube.com/@FinanceWithMukulAgrawal" target="_blank" rel="noopener" style="color:#92e3a9;">Subscribe on YouTube</a></li>
       </ul>
     </div>
@@ -60,7 +60,7 @@ var footerPlaceholder = document.getElementById('footer-placeholder');
 if (headerPlaceholder) {
   headerPlaceholder.innerHTML = headerHTML;
   // Make active link dynamic
-  var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  var currentPath = window.location.pathname;
   var links = headerPlaceholder.querySelectorAll('.nav-links a');
   links.forEach(function(link) {
     var linkPath = link.getAttribute('href');
