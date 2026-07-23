@@ -146,7 +146,7 @@ if (featuredGrid) {
 var reviewsGrid = document.getElementById('reviewsGrid');
 if (reviewsGrid) {
   var seedReviews = [
-    { name: "Priya Sharma", rating: 5, text: "Started with zero knowledge of the stock market. Dr. Mukul's videos broke everything down so simply \u2014 mutual funds finally make sense to me.", tag: "Student" },
+    { name: "Priya Sharma", rating: 5, text: "Started with zero knowledge of the stock market. Dr. Mukul's videos broke everything down so simply - mutual funds finally make sense to me.", tag: "Student" },
     { name: "Rohit Verma", rating: 5, text: "The tax-saving series alone saved me more than I expected. Clear, practical, no unnecessary jargon.", tag: "Student" },
     { name: "Ananya Iyer", rating: 4, text: "Great content for beginners. I'd love even more advanced strategy videos, but overall really solid.", tag: "Student" },
     { name: "Karan Mehta", rating: 5, text: "Watched the scam-awareness videos right before almost falling for a fake trading app. Genuinely grateful.", tag: "Student" },
