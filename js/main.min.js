@@ -222,6 +222,7 @@ if (contactForm) {
     var originalBtnText = formBtn.textContent;
     var name = document.getElementById('cf-name');
     var email = document.getElementById('cf-email');
+    var message = document.getElementById('cf-message');
     var valid = true;
 
     document.querySelectorAll('.cf-error').forEach(function(el){ el.style.display = 'none'; });
@@ -252,9 +253,10 @@ if (contactForm) {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY_HERE', // User needs to replace this
+          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY_HERE', // Replace this with your key
           name: name.value.trim(),
           email: email.value.trim(),
+          message: message ? message.value.trim() : '',
           subject: 'New Submission from Mukul Agrawal Site'
         })
       })
