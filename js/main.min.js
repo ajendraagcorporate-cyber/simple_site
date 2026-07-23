@@ -18,7 +18,7 @@ var headerHTML = `<nav class="nav">
       <li><a href="reviews.html">Student Reviews</a></li>
       <li><a href="contact-us.html">Contact Us</a></li>
     </ul>
-    <a class="nav-cta" href="https://www.youtube.com/@FinanceWithMukulAgrawal" target="_blank" rel="noopener">Watch on YouTube →</a>
+    <a class="nav-cta" href="https://www.youtube.com/@FinanceWithMukulAgrawal" target="_blank" rel="noopener">Watch on YouTube \u2192</a>
   </div>
 </nav>`;
 var footerHTML = `<footer>
@@ -28,7 +28,7 @@ var footerHTML = `<footer>
       <div class="mono" style="font-size:0.75rem;color:#92e3a9;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:20px;">Financial Education</div>
       <div style="font-size:0.85rem;color:#A9B6AE;line-height:1.7;max-width:280px;">
         C-1, Bank of Baroda Building,<br>Sector-M, Mama Chauraha,<br>Kursi Road, Lucknow<br>
-        <a href="tel:+919708094321" style="color:#DCE7E0;text-decoration:none;font-weight:600;margin-top:12px;display:inline-block;padding:8px 16px;background:rgba(255,255,255,0.05);border-radius:4px;">📞 +91-9708094321</a>
+        <a href="tel:+919708094321" style="color:#DCE7E0;text-decoration:none;font-weight:600;margin-top:12px;display:inline-block;padding:8px 16px;background:rgba(255,255,255,0.05);border-radius:4px;">\uD83D\uDCDE +91-9708094321</a>
       </div>
     </div>
     
@@ -146,7 +146,7 @@ if (featuredGrid) {
 var reviewsGrid = document.getElementById('reviewsGrid');
 if (reviewsGrid) {
   var seedReviews = [
-    { name: "Priya Sharma", rating: 5, text: "Started with zero knowledge of the stock market. Dr. Mukul's videos broke everything down so simply — mutual funds finally make sense to me.", tag: "Student" },
+    { name: "Priya Sharma", rating: 5, text: "Started with zero knowledge of the stock market. Dr. Mukul's videos broke everything down so simply \u2014 mutual funds finally make sense to me.", tag: "Student" },
     { name: "Rohit Verma", rating: 5, text: "The tax-saving series alone saved me more than I expected. Clear, practical, no unnecessary jargon.", tag: "Student" },
     { name: "Ananya Iyer", rating: 4, text: "Great content for beginners. I'd love even more advanced strategy videos, but overall really solid.", tag: "Student" },
     { name: "Karan Mehta", rating: 5, text: "Watched the scam-awareness videos right before almost falling for a fake trading app. Genuinely grateful.", tag: "Student" },
@@ -156,7 +156,7 @@ if (reviewsGrid) {
 
   function starString(n) {
     var s = "";
-    for (var i = 0; i < 5; i++) s += (i < n ? "★" : "☆");
+    for (var i = 0; i < 5; i++) s += (i < n ? "\u2605" : "\u2606");
     return s;
   }
 
@@ -178,7 +178,7 @@ if (reviewsGrid) {
       card.innerHTML =
         '<div style="color:var(--gold);font-size:0.95rem;letter-spacing:2px;margin-bottom:10px;">' + starString(r.rating) + '</div>' +
         '<p style="line-height:1.6;color:var(--ink);font-size:0.94rem;margin-bottom:16px;">' + escapeHtml(r.text) + '</p>' +
-        '<div class="mono" style="font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">' + escapeHtml(r.name) + ' · ' + escapeHtml(r.tag || 'Student') + '</div>';
+        '<div class="mono" style="font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">' + escapeHtml(r.name) + ' \u00B7 ' + escapeHtml(r.tag || 'Student') + '</div>';
       reviewsGrid.appendChild(card);
     });
   }
