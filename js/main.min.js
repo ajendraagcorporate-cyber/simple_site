@@ -140,6 +140,23 @@ if (featuredGrid) {
 
   renderSkeletons();
   loadRealData();
+
+  // Auto-update latest video
+  var latestIframe = document.getElementById('latest-video-iframe');
+  if (latestIframe) {
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3DUCPs8w9f1gqe4BqkbI-9wTnw')
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data && data.items && data.items.length > 0) {
+          var link = data.items[0].link;
+          var videoIdMatch = link.match(/v=([^&]+)/);
+          if (videoIdMatch && videoIdMatch[1]) {
+            latestIframe.src = 'https://www.youtube.com/embed/' + videoIdMatch[1] + '?si=UYNA3IMqL-YttXaW';
+          }
+        }
+      })
+      .catch(function(e) { console.error('Failed to load latest video', e); });
+  }
 }
 
 // Reviews
