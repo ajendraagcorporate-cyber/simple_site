@@ -253,7 +253,7 @@ if (contactForm) {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY_HERE', // Replace this with your key
+          access_key: '3b9937a5-883e-4a0d-aad1-dbd723630dd8', // Replace this with your key
           name: name.value.trim(),
           email: email.value.trim(),
           message: message ? message.value.trim() : '',
